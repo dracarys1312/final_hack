@@ -1,0 +1,43 @@
+<!-- <div class="row col-sm-6 col-sm-offset-3">
+    <div class="jumbotron">
+        <h1>Login</h1>
+        <form ng-submit="login.doLogin()">
+            <div class="form-group">
+                <label for="Username">Username</label>
+                <input name='Username' type="text" class="form-control" ng-model="login.loginData.username">
+            </div>
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" ng-model="login.loginData.password">
+            </div>
+            <div class="alert alert-danger" ng-if="login.error">
+                {{login.error}}
+            </div>
+            <button class="btn btn-block btn-primary" type="submit">
+                <span ng-if="!login.processing">Login</span>
+                <span ng-if="login.processing" class="spinner">
+                <span class="glyphicon glyphicon-repeat"></span>
+                </span>
+            </button>
+
+        </form>
+    </div>
+</div> -->
+
+<div class="col-md-4">
+  <h1>Register</h1>
+  <div ng-show="error" class="alert alert-danger" ng-if="login.error">{{login.error}}</div>
+  <form class="form" ng-submit="register()">
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" class="form-control" name="username" ng-model="registerForm.username" required>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+        <input type="password" class="form-control" name="password" ng-model="registerForm.password" required>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-default" ng-disabled="disabled">Register</button>
+      </div>
+  </form>
+</div>
